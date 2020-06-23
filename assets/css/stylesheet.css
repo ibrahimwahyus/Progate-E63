@@ -217,7 +217,7 @@ h4 {
 
 .top-wrapper {
   padding: 200px 0px 180px 0px;
-  background-image: url(assets/header.jpg);
+  background-image: url(../header.jpg);
   background-size: cover;
   color: black;
   text-align: left;
