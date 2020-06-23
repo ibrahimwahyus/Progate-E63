@@ -1,0 +1,515 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lucida Grande";
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+	background-color: rgba(34, 49, 52, 0.9);
+	display: flex;
+	justify-content: space-around;
+	height: 80px;
+	align-items: center;
+	font-family: sans-serif;
+  width: 100%;
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.menu {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	justify-content: space-around;
+
+}
+.menu li a {
+	text-decoration: none;
+	width: 40%;
+	color: white;
+	padding: 0 20px;
+	justify-content: space-between;
+	
+}
+.menu li a:hover {
+	text-decoration: underline;
+}
+.logo {
+	font-size: 30px;
+	margin: 25px;
+}
+h4 {
+	color: white;
+	font-family: sans-serif;
+
+}
+.login {
+	background-color: teal;
+	display: flex;
+	padding: 8px 0;
+	border-radius: 20px 20px 20px 20px;
+	border-top: 0.5px solid #dee7ec;
+	box-shadow: 0 2px #dee7ec;
+}
+.login:active {
+	box-shadow: none;
+	position: relative;	
+	top: 1px;
+}
+.login a {
+	text-decoration: none !important;
+}
+.login:hover {
+	background-color: #006d6d;
+	transition:all .25s;
+	cursor: pointer;
+}
+.sign-up {
+	display: flex;
+	border: 1px solid teal;
+	padding: 7px 0;
+	border-radius: 20px 20px 20px 20px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.sign-up a {
+	text-decoration: none !important;
+}
+.sign-up a:hover {
+	color: yellow;
+	transition: all .25s;
+	border-color: #006d6d;
+}
+.submenu-tablet {
+	display: none;
+}
+
+
+/* Menu Dropdown*/
+.dropbtn {
+  background-color: #222;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  text-decoration: underline;;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /*margin-top: 200px;
+  margin-right: 400px;*/
+  top: 50px;
+  margin: 0;
+  right: 600px;
+  left: 600px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 20px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+.dropdown-content a:hover {
+	text-decoration: underline;
+}
+
+.show {
+	display:block;
+}
+
+
+/*Menu garis-garis tiga*/
+.toggle {
+	justify-content: space-between;
+	position: relative;
+	flex-direction: column;
+	height: 20px;
+	width: 25px;
+	display: none;
+}
+
+.toggle input {
+	position: absolute;
+	transform: scale(2);
+	cursor: pointer;
+	width: 15px;
+	height: 15px;
+	opacity: 0;
+	right: 5px;
+	top: 2px;
+	z-index: 100;
+}
+.toggle span {
+	display: flex;
+	width: 25px;
+	height: 4px;
+	background-color: white;
+	/*border-radius: 3px;*/
+	transition: all 0.9s;
+}
+/*garis pertama animasi*/
+.toggle span:nth-child(2) {
+	/*background-color: white;*/
+	transform-origin: 0 0;
+}
+
+.toggle input:checked ~ span:nth-child(2) {
+	transform: rotate(50deg) translate(-1px, 0px);
+}
+
+.toggle span:nth-child(4) {
+	/*background-color: white;*/
+	transform-origin: 0 100%;
+}
+
+.toggle input:checked ~ span:nth-child(4) {
+	transform: rotate(-50deg) translate(-1px, 0);
+}
+
+.toggle input:checked ~ span:nth-child(3) {
+	opacity: 0;
+	transform: scale(0);
+}
+
+.clear {
+  clear: left;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container-team {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.top-wrapper {
+  padding: 200px 0px 180px 0px;
+  background-image: url(assets/header.jpg);
+  background-size: cover;
+  color: black;
+  text-align: left;
+  opacity: 1;
+  width : 100%;
+}
+
+
+
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 45px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;  
+}
+
+.animasi-teks {
+  transition: all 0.5s
+}
+
+.top-wrapper p {
+  opacity: 0.7;
+  margin-bottom: 3px;
+  transition: all 0.7s
+}
+
+.btn-wrapper {
+  text-align: left;
+  margin: 20px 0;
+}
+
+
+.btn-wrapper p {
+  margin: 10px 0;
+}
+
+.feedback {
+  background-color: #ff9100;
+  display: inline-block;
+    padding: 17px 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    transition: all 0.9s
+}
+
+.about {
+  background-color: #ffc400;
+  display: inline-block;
+    padding: 17px 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    transition: all 0.9s
+}
+
+
+.btn {
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 20px;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Tambahkan CSS untuk menu-icon */
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  /* Gantikan property display ke none */
+  display: none;
+}
+
+
+.lesson-wrapper {
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  color: #5f5d60;
+}
+
+.heading h2 {
+  font-weight: normal;
+}
+
+
+.lessons h3 {
+  padding-bottom: 0px;
+  margin-bottom: auto;
+}
+
+.lesson {
+  float: left;
+  width: 20%;
+}
+
+.lesson-icon {
+  position: relative;
+}
+
+.lesson-icon img {
+  width : 100px;
+  height : 100px;
+  border-radius : 50px 50px 50px 50px;
+  border : 1px solid #ddd;
+}
+
+/* [1] The container */
+.img-hover-zoom {
+  height: 130px; /* [1.1] Set it as per your need */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+
+.lesson-icon p {
+  position: absolute;
+  top: 44%;
+  width: 100%;
+  color: white;
+}
+
+.text-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #b3aeb5;
+}
+
+.heading h3 {
+  font-weight: normal;
+}
+
+.container1 {
+  background-color: orange !important;
+  color: black;
+  padding: 20px 35px;
+}
+
+.container2 {
+  padding: 0 35px;
+}
+
+.footer-list li {
+  padding-bottom: 5px;
+}
+
+.container1 h3 {
+ padding-bottom: 15px;
+}
+
+.media-sosial {
+  margin-top : 10px;
+  margin-left: 30px;
+ }
+
+.container2 {
+ background-color: black;
+ color: white;
+ padding-top: 25px; 
+ height: 60px;
+ 
+}
+.footer-list2 {
+  float: left;
+  margin-top: -20px;
+}
+
+
+
+
+
+.heading-utama h2 {
+  font-weight: normal;
+  border-bottom: 2px solid #b3aeb5;
+  margin-top: -50px;
+}
+.lesson-utama {
+  float: left;
+  width: 25%;
+}
+
+.lesson-icon-utama {
+  position: relative;
+  /*background-color: red;*/
+  height: 250px;
+  padding: 10px 30px;
+  margin: 10px 10px;
+  border-radius: 5px;
+  border: 2px solid #b3aeb5;
+}
+.lesson-icon-utama:hover {
+  background-color: #eae4e4;
+}
+
+.lesson-icon-utama p {
+  position: absolute;
+  top: 30%;
+  width: 60%;
+  color: white;
+  background-color: red;
+  justify-content: center;
+  text-align: center;
+}
+.lesson-icon-utama img {
+  border: 2px solid #b3aeb5;
+  width : 100%;
+}
+.no-reg{
+  font-size: 15px;
+  font-family: "Lucida Grande";
+  margin-top: -20px; 
+  color: #b3aeb5;
+}
+
+.lesson-wrapper-utama {
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top : 100px;
+  background-color: #d8d7d6;
+  text-align: center;
+}
+
+label {
+  top : 40%;
+}
