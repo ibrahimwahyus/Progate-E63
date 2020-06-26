@@ -1,0 +1,247 @@
+/* Untuk Tablet */
+@media all and (max-width: 1000px) {
+.lesson {
+	width: 50%;
+	margin-bottom: 50px;
+}
+.lesson-utama {
+	width: 50%;
+	margin-bottom: 50px;
+}
+.top-wrapper h1 {
+	font-size: 32px;
+}
+.heading h2 {
+	font-size: 20px;
+}
+.logo {
+	display: flex;
+}
+.toggle {
+	display: none;
+}
+.item {
+	order: 3;
+	display: flex;
+}
+.login {
+	order: 4;
+	background-color: teal;
+	display: flex;
+	padding: 8px 0;
+	border-radius: 20px 20px 20px 20px;
+	border-top: 0.5px solid #dee7ec;
+	box-shadow: 0 2px #dee7ec;
+}
+.login:active {
+	box-shadow: none;
+	position: relative;	
+	top: 1px;
+}
+.login a {
+	text-decoration: none !important;
+	color: white;
+}
+.login:hover {
+	background-color: #006d6d;
+	transition:all .25s;
+	cursor: pointer;
+}
+.sign-up {
+	order: 5;
+	display: flex;
+	border: 1px solid teal;
+	padding: 7px ;
+	border-radius: 20px 20px 20px 20px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.sign-up a {
+	text-decoration: none !important;
+	color: white;
+}
+.sign-up a:hover {
+	color: yellow;
+	transition:all .25s;
+	border-color: #006d6d;
+}
+}
+
+/* Untuk Smartphone */
+@media all and (max-width: 670px) {
+  .lesson {
+    width: 100%;
+  }
+
+  .lesson-utama {
+    width: 100%;
+  }
+  
+  footer {
+    text-align: center;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .facebook {
+    margin-bottom: 10px;
+  }
+  
+  .top-wrapper {
+    text-align: left;
+  }
+  
+  /* Tambahkan CSS untuk header-right */
+  .header-right {
+    display : none;
+  }
+  
+  /* Tambahkan CSS untuk menu-icon */
+  .menu-icon {
+    	display : block;
+  }
+  .top-wrapper h1 {
+    	font-size: 24px;
+    	line-height: 36px;
+  }
+  .top-wrapper p {
+    	font-size: 14px;
+    	line-height: 20px;
+  }
+  .logo {
+    	order: 0;
+    	display: flex;
+  }
+  .toggle {
+  	display: flex;
+  	order: 2;
+  }
+  .item {
+    	order: 3;
+    	display: flex;
+  }
+  .login {
+	order: 4;
+	background-color: teal;
+	display: flex;
+	padding: 8px 0;
+	border-radius: 20px 20px 20px 20px;
+	border-top: 0.5px solid #dee7ec;
+	box-shadow: 0 2px #dee7ec;
+  }
+  .login:active {
+	box-shadow: none;
+	position: relative;	
+	top: 1px;
+  }
+  .login a {
+	text-decoration: none !important;
+	color: white;
+  }
+  .login:hover {
+	background-color: #006d6d;
+	transition:all .25s;
+	cursor: pointer;
+  }
+  .sign-up {
+	display: flex;
+	border: 1px solid teal;
+	padding: 6px 0;
+	border-radius: 20px 20px 20px 20px;
+	margin: 0 10px;
+	cursor: pointer;
+  }
+  .sign-up a {
+	text-decoration: none !important;
+  }
+  .sign-up a:hover {
+	color: yellow;
+	transition: all .25s;
+	border-color: #006d6d;
+  }
+  nav ul {
+	display: flex;
+	position: absolute;
+	background-color: #222;
+	top: 90px;
+	left: 0;
+	right: 0;
+	height: 70vh;
+	flex-direction: column;
+	transition: all 2s;
+	z-index: 10;
+	transform: scale(100%);
+}
+nav ul li {
+	display: flex;
+	color: white;
+	flex-direction: column;
+	padding: 10px 10px;
+}
+nav ul.slide {
+	transform: scale(0);
+	transition: all 1s;
+}
+#mySidenav a:hover {
+	 left: 0;
+}
+#line {
+	  top: 20px;
+	  background-color: #4CAF50;
+}
+#line img {
+	  width: 50px;
+	  height: 50px;
+	  position: absolute;
+	  margin-left: 52px;
+	  padding: -10px;
+	  margin-top: -14px;
+	  border-radius: 10px;
+}
+#pinterest {
+	  top: 80px;
+	  background-color: #ff6666;
+}
+#pinterest img {
+	  width: 50px;
+	  height: 50px;
+	  position: absolute;
+	  margin-left: 5px;
+	  padding: -10px;
+	  margin-top: -14px;
+	  border-radius: 10px;
+	  position: fixed;
+}
+#telegram {
+	  top: 140px;
+	  background-color: #2196F3;
+}
+#telegram img {
+	  width: 50px;
+	  height: 50px;
+	  position: absolute;
+	  margin-left: 10px;
+	  padding: -10px;
+	  margin-top: -14px;
+	  border-radius: 10px;
+	  position: fixed;
+}
+#youtube {
+	  top: 200px;
+	  background-color: #cc0000;
+}
+#youtube img {
+	  width: 50px;
+	  height: 50px;
+	  position: absolute;
+	  margin-left: 20px;
+	  padding: -10px;
+	  margin-top: -14px;
+	  border-radius: 10px;
+	  position: fixed;
+}
+}
+
+	
